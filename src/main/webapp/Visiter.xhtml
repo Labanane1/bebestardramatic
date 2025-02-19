@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>Visiter - Indonésie</title>
+    
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+
+    <div class="container text-center p-4 shadow bg-white rounded" style="max-width: 1000px; max-height: 100px;">
+        <!-- Titre de la page -->
+        <h1 class="mb-4">Bienvenue sur la page de visite en Indonésie</h1>
+        <p>Explorez quelques lieux célèbres de l'Indonésie et découvrez la beauté de ce pays incroyable !</p>
+
+        <!-- Grille des lieux indonésiens -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <!-- Correction ici : fermeture correcte de la balise img -->
+                    <img src="https://www.splendia.com/wp-content/uploads/2024/02/1-26.jpg" class="card-img-top" alt="Bali"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Bali</h5>
+                        <p class="card-text">Profitez de ses plages magnifiques et de sa culture vibrante.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://www.agoda.com/wp-content/uploads/2024/02/shutterstock_713842591-1-1244x700.jpg" class="card-img-top" alt="Yogyakarta"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Yogyakarta</h5>
+                        <p class="card-text">Famous for its temples and art scene.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Borobudur_Temple.jpg/250px-Borobudur_Temple.jpg" class="card-img-top" alt="Borobudur"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Borobudur</h5>
+                        <p class="card-text">World-renowned Buddhist temple and UNESCO World Heritage site.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://theworldtravelguy.com/wp-content/uploads/2023/10/DSCF2851_gal1.jpg" class="card-img-top" alt="Komodo Island"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Komodo Island</h5>
+                        <p class="card-text">Home to the Komodo dragons and stunning landscapes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton retour -->
+        <h:form>
+            <h:commandButton value="Retour" action="home" styleClass="btn btn-danger w-100 mt-4"/>
+        </h:form>
+    </div>
+
+    <!-- Bootstrap JS (nécessaire si vous utilisez des composants interactifs comme modals, tooltips, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

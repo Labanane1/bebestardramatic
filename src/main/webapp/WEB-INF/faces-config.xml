@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation-rule>
+    <from-view-id>/index.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>home</from-outcome>
+        <to-view-id>/home.xhtml</to-view-id>
+        <redirect/>
+    </navigation-case>
+    
+     <from-view-id>/home.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>A propos</from-outcome>
+        <to-view-id>/A_propos.xhtml</to-view-id>
+        <redirect/>
+    </navigation-case>
+    
+      <from-view-id>/home.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>ajouter lieu</from-outcome>
+        <to-view-id>/Ajouter.xhtml</to-view-id>
+        <redirect/>
+    </navigation-case>
+    
+    <from-view-id>/home.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>visiter</from-outcome>
+        <to-view-id>/Visiter.xhtml</to-view-id>
+        <redirect/>
+    </navigation-case>
+</navigation-rule>
+
