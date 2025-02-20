@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>Ajouter un lieu</title>
+    
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+
+    <div class="container shadow bg-white rounded p-4">
+        <div class="row">
+            <!-- Formulaire pour ajouter un lieu -->
+            <div class="col-md-6">
+                <h4 class="mb-3 text-center">Ajouter un lieu</h4>
+                
+                <f:metadata>
+    <f:viewAction action="#{lieuBean.initListe}" />
+</f:metadata>
+
+
+               <h:form>
+    <div class="mb-3">
+        <h:outputLabel value="Nom du lieu : " styleClass="form-label"/>
+        <h:inputText value="#{lieuBean.lieu.nom}" styleClass="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <h:outputLabel value="Description : " styleClass="form-label"/>
+        <h:inputTextarea value="#{lieuBean.lieu.description}" styleClass="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <h:outputLabel value="Longitude : " styleClass="form-label"/>
+        <h:inputText value="#{lieuBean.lieu.longitude}" styleClass="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <h:outputLabel value="Latitude : " styleClass="form-label"/>
+        <h:inputText value="#{lieuBean.lieu.latitude}" styleClass="form-control"/>
+    </div>
+
+    <h:commandButton value="Ajouter" action="#{lieuBean.ajouterLieu}" styleClass="btn btn-danger w-100"/>
+</h:form>
+
+
+            </div>
+
+            <!-- Tableau des lieux ajoutés -->
+            <div class="col-md-6">
+                <h4 class="mb-3 text-center">Lieux ajoutés</h4>
+                <h:dataTable value="#{lieuBean.lieux}" var="lieu" styleClass="table table-bordered">
+                    <h:column>
+                        <f:facet name="header">Nom</f:facet>
+                        #{lieu.nom}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                        #{lieu.description}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Longitude</f:facet>
+                        #{lieu.longitude}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Latitude</f:facet>
+                        #{lieu.latitude}
+                    </h:column>
+                </h:dataTable>
+            </div>
+        </div>
+
+        <!-- Bouton retour vers l'accueil -->
+        <div class="text-center mt-3">
+            <h:form>
+                <h:commandButton value="Retour" action="home" styleClass="btn btn-danger"/>
+            </h:form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
